@@ -1,0 +1,25 @@
+.heater {
+    width: 150px;
+    height: 200px;
+    background-color: #eee;
+    border-radius: 10px;
+}
+
+.heater.on {
+    background-color: #faa;
+}
+
+.heater-rod {
+    width: 20px;
+    height: 60px;
+    background-color: #333;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 70px;
+    transition: all 0.5s;
+}
+
+.heater-rod.on {
+    background-color: #ffa;
+    box-shadow: 0 0 10px #ff0;
+}
