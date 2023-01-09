@@ -2,6 +2,11 @@ import React from 'react';
 import './fire.css'
 
 const worker1 = new Worker('./worker.js');
+const worker2 = new Worker('./worker.js');
+const worker3 = new Worker('./worker.js');
+const worker4 = new Worker('./worker.js');
+const worker5 = new Worker('./worker.js');
+const worker6 = new Worker('./worker.js');
 
 class Fire extends React.Component {
   constructor(props) {
