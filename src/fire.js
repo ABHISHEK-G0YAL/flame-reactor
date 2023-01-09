@@ -1,15 +1,7 @@
 import React from 'react';
 import './fire.css'
 
-const fireup = () => {
-  console.log('burning 🔥');
-  setTimeout(fireup, 1);
-  setTimeout(fireup, 1);
-  setTimeout(fireup, 1);
-  setTimeout(fireup, 1);
-};
-
-fireup();
+const worker1 = new Worker('./worker.js');
 
 class Fire extends React.Component {
   constructor(props) {
