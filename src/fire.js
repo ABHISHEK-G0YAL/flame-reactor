@@ -1,12 +1,7 @@
 import React from 'react';
 import './fire.css'
 
-const worker1 = new Worker('./worker.js');
-const worker2 = new Worker('./worker.js');
-const worker3 = new Worker('./worker.js');
-const worker4 = new Worker('./worker.js');
-const worker5 = new Worker('./worker.js');
-const worker6 = new Worker('./worker.js');
+const createWorkers = n => Array.from({ length: n }, () => new Worker('./worker.js'));
 
 class Fire extends React.Component {
   constructor(props) {
@@ -14,11 +9,21 @@ class Fire extends React.Component {
     this.state = {
       on: false,
     };
+    this.workers = [];
   }
 
   toggleFire = () => {
     this.setState(prevState => ({ on: !prevState.on }));
   };
+
+  componentDidUpdate() {
+    if (this.state.on) {
+      this.workers = createWorkers(8);
+    } else {
+      this.workers.map(worker => worker.terminate());
+      this.workers = [];
+    }
+  }
 
   render() {
     return (
