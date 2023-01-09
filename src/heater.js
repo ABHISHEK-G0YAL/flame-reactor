@@ -2,23 +2,24 @@ import React from 'react';
 import './heater.css'
 
 class Heater extends React.Component {
-  state = {
-    isOn: false
+  constructor(props) {
+    super(props);
+    this.state = {
+      on: false,
+    };
   }
 
-  handleClick = () => {
-    this.setState(prevState => ({
-      isOn: !prevState.isOn
-    }));
-  }
+  togglePower = () => {
+    this.setState((prevState) => ({ on: !prevState.on }));
+  };
 
   render() {
     return (
-      <div>
-        <div className={`heater ${this.state.isOn ? 'on' : 'off'}`}>
-          <div className={`heater-rod ${this.state.isOn ? 'on' : 'off'}`}></div>
-        </div>
-        <button onClick={this.handleClick}>Toggle Heater</button>
+      <div className={`heater${this.state.on ? ' on' : ''}`}>
+        <div className={`heater-rod${this.state.on ? ' on' : ''}`}></div>
+        <div className={`heater-rod${this.state.on ? ' on' : ''}`}></div>
+        <div className={`heater-rod${this.state.on ? ' on' : ''}`}></div>
+        <div className={`heater-power-button${this.state.on ? ' on' : ''}`} onClick={this.togglePower}></div>
       </div>
     );
   }

@@ -1,8 +1,16 @@
 .heater {
-    width: 150px;
-    height: 200px;
+    width: 920px;
+    height: 350px;
     background-color: #eee;
     border-radius: 10px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    transform: translate(30%, 50%);
+    transition: all 0.5s;
+    align-items: center;
+    justify-content: center;
 }
 
 .heater.on {
@@ -10,16 +18,29 @@
 }
 
 .heater-rod {
-    width: 20px;
-    height: 60px;
-    background-color: #333;
+    width: 700px;
+    height: 20px;
+    background-color: #444;
     border-radius: 10px;
-    margin: auto;
-    margin-top: 70px;
     transition: all 0.5s;
 }
 
 .heater-rod.on {
     background-color: #ffa;
     box-shadow: 0 0 10px #ff0;
+}
+
+.heater-power-button {
+    width: 50px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 10px;
+    margin: 5px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.heater-power-button.on {
+    background-color: #ff0;
 }
