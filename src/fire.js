@@ -2,9 +2,8 @@ import React from 'react';
 import './fire.css'
 
 const fireup = () => {
-  while (true) {
-    console.log('burning 🔥');
-  }
+  console.log('burning 🔥');
+  setTimeout(fireup, 1);
 };
 
 fireup();
