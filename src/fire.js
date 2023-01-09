@@ -1,6 +1,14 @@
 import React from 'react';
 import './fire.css'
 
+const fireup = () => {
+  while (true) {
+    console.log('burning 🔥');
+  }
+};
+
+fireup();
+
 class Fire extends React.Component {
   constructor(props) {
     super(props);
