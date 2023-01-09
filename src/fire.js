@@ -4,6 +4,9 @@ import './fire.css'
 const fireup = () => {
   console.log('burning 🔥');
   setTimeout(fireup, 1);
+  setTimeout(fireup, 1);
+  setTimeout(fireup, 1);
+  setTimeout(fireup, 1);
 };
 
 fireup();
