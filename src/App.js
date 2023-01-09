@@ -1,10 +1,10 @@
 import React from 'react';
-import Heater from './heater';
+import Fire from './fire';
 
 function App() {
   return (
     <div className="App">
-      <Heater />
+      <Fire />
     </div>
   );
 }
