@@ -1,7 +1,7 @@
 import React from 'react';
 import './fire.css'
 
-const createWorkers = n => Array.from({ length: n }, () => new Worker('./worker.js'));
+const createWorkers = n => Array.from({ length: n }, () => new Worker(new URL('./worker.js', import.meta.url)));
 
 class Fire extends React.Component {
   constructor(props) {
